@@ -1,12 +1,78 @@
-# React + Vite
+Here's a README file for your Gemini Clone project using React, Tailwind CSS, and the Gemini API:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+# Gemini Clone
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A simple AI-powered chatbot built using React, Tailwind CSS, and the Gemini API.
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Chat interface to interact with the Gemini AI.
+- Responsive and modern UI with Tailwind CSS.
+- API integration for AI-powered responses.
+
+## 🛠 Tech Stack
+
+- **Frontend:** React, Tailwind CSS
+- **AI API:** Google Gemini API
+
+## 📦 Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/kushvendar/gemini-clone.git
+   cd gemini-clone
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+
+3. **Set up the API key:**
+   - Get your API key from the [Google Gemini API](https://ai.google.dev).
+   - Create a `.env` file in the project root and add:
+     ```
+     REACT_APP_GEMINI_API_KEY=your_api_key_here
+     ```
+
+4. **Run the project:**
+   ```sh
+   npm run dev
+   ```
+
+## 📜 Usage
+
+- Type your message in the input box and send it.
+- Gemini AI will respond in real-time.
+- The chat history is displayed dynamically.
+
+## 📌 Project Structure
+
+```
+/gemini-clone
+│── /src
+│   ├── /components
+│   │   ├── Chat.jsx
+│   │   ├── Message.jsx
+│   ├── /utils
+│   │   ├── api.js
+│   ├── App.jsx
+│   ├── main.jsx
+│── /public
+│── .env
+│── package.json
+│── README.md
+```
+
+## 🔧 Future Enhancements
+
+- Improve UI/UX with animations.
+- Add authentication for personalized responses.
+- Implement message storage.
+
+## 🤝 Contributing
+
+Feel free to fork this repo and submit pull requests! 
+
