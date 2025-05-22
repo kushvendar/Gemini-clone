@@ -24,15 +24,15 @@ function Sidebar() {
         </div>
       <div className='flex flex-col'>
         <div className='flex hover:bg-[#e2e6eb] cursor-pointer gap-[10px] p-[10px] text-[#282828] items- rounded-[50px]'>
-        <img src={assets.question_icon} className='w-[24px]' alt="" />
+        <img src={assets.question_icon} className='w-[27px]' alt="" />
         {extend?<p className='font-[outfit]'>Help</p>:null}
         </div>
-        <div className='flex hover:bg-[#e2e6eb] pr-[10px] cursor-pointer gap-[10px] p-[10px] text-[#282828] items- rounded-[50px]'>
-        <img src={assets.history_icon} className='w-[24px]' alt="" />
+        <div className='flex hover:bg-[#e2e6eb] pr-[10px] pl-[10px] cursor-pointer gap-[10px] p-[10px] text-[#282828] items-center rounded-[50px]'>
+        <img src={assets.history_icon} className='w-[27px]' alt="" />
         {extend?<p className='font-[outfit]'>Activity</p>:null}
         </div>
         <div className='flex hover:bg-[#e2e6eb] pr-[10px] cursor-pointer gap-[10px] p-[10px] text-[#282828] items- rounded-[50px]'>
-        <img src={assets.setting_icon} className='w-[24px]' alt="" />
+        <img src={assets.setting_icon} className='w-[27px]' alt="" />
         {extend?<p className='font-[outfit]'>Settings</p>:null}
         </div>
       </div>
