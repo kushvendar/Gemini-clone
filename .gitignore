@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
-.envgi
+.env
 dist-ssr
 *.local
 
