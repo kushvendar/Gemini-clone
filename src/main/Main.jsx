@@ -2,23 +2,13 @@ import { assets } from '../assets/assets'
 
 
 function Main() {
-  const words = [
-    {
-      text: "Hello"
-    },
-    {
-      text: ", "
-    },
-    {
-      text: " Kushvendar"
-    }
-  ]
+
   return (
     <div className='flex-1 min-h-screen pb-[15vh] relative'>
       <div className='flex items-center justify-between text-[22px] p-[20px] text-[#585858]'>
         <p>Gemini</p>
         <img src={assets.user_icon} className='w-[40px] rounded-[50%]' alt="user_img" />
-      </div>
+    </div>
       <div className='max-w-4xl m-auto'>
         <div className='m-[50px] mr-0 ml-0 text-[56px] font-medium p-[20px] text-[#c4c7c5]'>
         <p><span className='text-transparent bg-clip-text bg-gradient-to-r from-[#4b90ff] to-[#ff5546]'>Hello Kush</span></p>
