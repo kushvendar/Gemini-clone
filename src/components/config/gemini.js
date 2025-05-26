@@ -1,13 +1,17 @@
 import {GoogleGenAI} from '@google/genai';
 
+const apiKey = process.env.GEMINI_API_KEY
+
+
 async function main(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: process.env.GEMINI_API_KEY,
+    apiKey: apiKey,
+    
   });
   const config = {
     responseMimeType: 'text/plain',
   };
-  const model = 'gemini-2.5-pro-preview-05-06';
+  const model = 'gemini-1.5-flash-8b';
   const contents = [
     {
       role: 'user',
@@ -24,9 +28,11 @@ async function main(prompt) {
     config,
     contents,
   });
-  for await (const chunk of response) {
-    console.log(chunk.text);
-  }
-}
 
+  let result = ""
+  for await (const chunk of response) {
+    result+=chunk.text
+  }
+  return result
+}
 export default main 
