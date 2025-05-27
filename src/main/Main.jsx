@@ -2,6 +2,7 @@ import { assets } from '../assets/assets'
 import { useContext } from 'react'
 import { context } from '../components/context/Context'
 
+// 1:13:27
 
 function Main() {
 
@@ -39,7 +40,7 @@ function Main() {
         </div>
     </div>
     </>:
-    <div>
+    <div className='px-6 max-h-70vh overflow-y-scroll'>
       <div>
         <img src={assets.user_icon} alt="userlogo" />
         <p>{recentPrompt}</p>

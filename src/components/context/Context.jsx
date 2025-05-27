@@ -18,7 +18,7 @@ const ContextProvider = (props)=>{
         setResultdata("")
         setLoading(true)
         setResult(true)
-        setRecentprompt(prompt)
+        setRecentprompt(input)
         const response = await main(input)
         setResultdata(response)
         setLoading(false)

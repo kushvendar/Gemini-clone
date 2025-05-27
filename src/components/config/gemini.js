@@ -1,12 +1,12 @@
 import {GoogleGenAI} from '@google/genai';
 
-const apiKey = process.env.GEMINI_API_KEY
+// const apiKey = process.env.GEMINI_API_KEY
 
 
 async function main(prompt) {
   const ai = new GoogleGenAI({
-    apiKey: apiKey,
-    
+    // apiKey: apiKey,
+    apiKey:"AIzaSyAQN-mj2V9NKunRctRh0NAAaVhFF5XgDEo",
   });
   const config = {
     responseMimeType: 'text/plain',
