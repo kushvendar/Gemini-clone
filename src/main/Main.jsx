@@ -13,7 +13,7 @@ function Main() {
       <div className='flex items-center justify-between text-[22px] p-[20px] text-[#585858]'>
         <p>Gemini</p>
         <img src={assets.user_icon} className='w-[40px] rounded-[50%]' alt="user_img" />
-    </div>
+    </div> 
       <div className='max-w-4xl m-auto'>
       {!showResult ? <>
               <div className='m-[50px] mr-0 ml-0 text-[56px] font-medium p-[20px] text-[#c4c7c5]'>
@@ -40,14 +40,14 @@ function Main() {
         </div>
     </div>
     </>:
-    <div className='px-6 max-h-70vh overflow-y-scroll'>
-      <div>
-        <img src={assets.user_icon} alt="userlogo" />
+    <div className='pl-[5%] pr-[5%] max-h-[70vh] overflow-y-scroll '>
+      <div className='mt-[40px] mb-[40px] flex items-center gap-[20px] '>
+        <img className='w-[40px] rounded-[50px]' src={assets.user_icon} alt="userlogo" />
         <p>{recentPrompt}</p>
       </div>
-      <div>
+      <div className='flex items-start gap-[20px]'>
         <img src={assets.gemini_icon} alt="gemini" />
-        <p dangerouslySetInnerHTML={{__html:resultData}}></p>
+        {loading?<div className='w-100 flex flex-col gap-[10px]'> <hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /></div>:<p dangerouslySetInnerHTML={{__html:resultData}}></p>}
       </div>
     </div>
       }
