@@ -34,7 +34,7 @@ const ContextProvider = (props)=>{
                 newArray+="<b>"+responseArray[i]+"</b>"
             }
         }
-        let newResponse = newArray.split("*").join("</br>")
+        let newResponse = newArray.split("*").join("<br/>")
         setResultdata(newResponse)
         setLoading(false)
         setInput("")
