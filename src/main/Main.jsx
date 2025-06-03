@@ -56,7 +56,7 @@ function Main() {
       <div className='flex items-start gap-[20px]'>
         <img className='h-[47px]' src={assets.gemini_icon} alt="gemini" />
         {loading?<div className='w-100 flex flex-col gap-[10px]'> <hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /></div>:
-        <p className='text-[17px] font-light leading-[1.8]' dangerouslySetInnerHTML={{__html:resultData}}></p>}
+        <p className='text-[17px] font-normal leading-[1.8]' dangerouslySetInnerHTML={{__html:resultData}}></p>}
       </div>
     </div>
       }
