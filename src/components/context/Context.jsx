@@ -4,6 +4,10 @@ import main from "../config/gemini";
 
 export const context = createContext()
 
+const delayPara = ()=>{
+
+}
+
 const ContextProvider = (props)=>{
     
     const [input,setInput] = useState("")
@@ -19,8 +23,19 @@ const ContextProvider = (props)=>{
         setLoading(true)
         setResult(true)
         setRecentprompt(input)
-        const response = await main(input)
-        setResultdata(response)
+        const response = await main(input) 
+        let responseArray = response.split("**")
+        let responseArraySingle = response.split("*")
+        let newArray
+        for(let i=0;i<responseArray.length;i++){
+            if(i%2===0){
+                newArray+=responseArray[i]
+            } else{
+                newArray+="<b>"+responseArray[i]+"</b>"
+            }
+        }
+        let newResponse = newArray.split("*").join("</br>")
+        setResultdata(newResponse)
         setLoading(false)
         setInput("")
     }

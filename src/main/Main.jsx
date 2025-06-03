@@ -2,11 +2,19 @@ import { assets } from '../assets/assets'
 import { useContext } from 'react'
 import { context } from '../components/context/Context'
 
-// 1:13:27
+// 1:23:00
 
 function Main() {
 
   const { prevPrompt, setPrevprompt, onSent, recentPrompt, setRecentprompt, showResult, loading, resultData, input, setInput} = useContext(context)
+
+  const handleKeydown = async(e)=>{
+    if(e.key==="Enter"){      
+      onSent()
+      input=""
+      
+    }
+  }
 
   return (
     <div className='flex-1 min-h-screen pb-[15vh] relative'>
@@ -46,15 +54,16 @@ function Main() {
         <p>{recentPrompt}</p>
       </div>
       <div className='flex items-start gap-[20px]'>
-        <img src={assets.gemini_icon} alt="gemini" />
-        {loading?<div className='w-100 flex flex-col gap-[10px]'> <hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /></div>:<p dangerouslySetInnerHTML={{__html:resultData}}></p>}
+        <img className='h-[47px]' src={assets.gemini_icon} alt="gemini" />
+        {loading?<div className='w-100 flex flex-col gap-[10px]'> <hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /><hr className='rounded-[4px] border-none bg-[#f6f7f8] bg-gradient-to-r from-[#9ed7ff] via-white to-[#9ed7ff] bg-size-[800px] bg-[50px] h-[20px] animate-pulse' /></div>:
+        <p className='text-[17px] font-light leading-[1.8]' dangerouslySetInnerHTML={{__html:resultData}}></p>}
       </div>
     </div>
       }
       {/* bottom */}
       <div className='absolute bottom-0 w-[100%] max-w-[900px] pr-[20px] pl-[20px] m-auto'>
         <div className='flex bg-[#f0f4f9] items-center justify-between pt-[10px] pb-[10px] pr-[20px] pl-[20px] gap-[20px] rounded-[50px] '>
-          <input type="text" placeholder='Enter a prompt here' className='flex-1 bg-transparent p-[8px] font-[14px]' onChange={(e)=>setInput(e.target.value)} value={input} />
+          <input type="text" placeholder='Enter a prompt here' className='flex-1 bg-transparent p-[8px] font-[14px] outline-none' onChange={(e)=>setInput(e.target.value)} onKeyDown={handleKeydown} value={input} />
           <div className='flex flex-row gap-[15px] items-center'>
             <img className='w-[24px] cursor-pointer' src={assets.gallery_icon} alt="" />
             <img className='w-[24px] cursor-pointer' src={assets.mic_icon} alt="" />
