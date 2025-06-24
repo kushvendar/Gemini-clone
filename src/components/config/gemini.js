@@ -4,9 +4,10 @@ import {GoogleGenAI} from '@google/genai';
 
 
 async function main(prompt) {
+
+  const API_KEY = import.meta.env.VITE_GEMINI_API_KEY
   const ai = new GoogleGenAI({
-    // apiKey: apiKey,
-    apiKey:"AIzaSyAQN-mj2V9NKunRctRh0NAAaVhFF5XgDEo",
+    apiKey:API_KEY
   });
   const config = {
     responseMimeType: 'text/plain',

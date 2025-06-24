@@ -4,9 +4,7 @@ import main from "../config/gemini";
 
 export const context = createContext()
 
-const delayPara = ()=>{
 
-}
 
 const ContextProvider = (props)=>{
     
